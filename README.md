@@ -1,5 +1,6 @@
 # DA-RNN_for_timeseries
 DA-RNN_for_timeseries 
 
-
-Ceci est un ReadMe
+# Quel probleme cherche-t-on a résoudre ? 
+# l’originilatité/specificité de la Methode
+# Inconvenients de la méthode
