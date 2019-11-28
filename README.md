@@ -1,5 +1,4 @@
-# DA-RNN_for_timeseries
-DA-RNN_for_timeseries 
+# DA-RNN for timeseries prediction
 
 # Quel probleme cherche-t-on a résoudre ? 
 On cherche a déterminer les futures valeurs d'un cours boursier. Plus précisement, on souhaite predire les valeurs d'une serie temporelle a partir des occurences precedentes de celles ci mais aussi de plusieurs séries exogènes, c'est à dire extérieures au probleme principal bien qu'ayant une influence sur la serie etudiée. Cette manière de modeliser une situation se nomme le model NARX (Nonlinear Autoregressive Exogenous Model). L'objectif est de deceler un comportement non linéaire de la serie. 
@@ -29,6 +28,8 @@ Les poids d'attentions de chaques états cachés de l'encodeur sont calculés a 
 On note que le vecteur de contexte *ct* change à chaque time-step. Une fois qu'on a l'ensemble de ces vecteurs de contexte on peut les combiner avec les series cibles données. Cette combinaison de serie permet de mettre a jour le décodeur à l'instant t. Encore une fois la fonction d'activation non linéaire est un LSTM.
 
 # Inconvenients de la méthode
+
+Sur des jeux de données divers la methode a tendance a sur-apprendre, c'est a dire qu'elle predit une serie très proche de la serie d'origine avec un leger decalage temporel. Nous avons focalisé notre attention sur le reglages des parametres permettant d'eviter ce probleme. Ainsi, nous cherchons a reduire le nombre de parametres du modèle tel qu'il est defini dans le papier... 
 
 # Data CAC40
 
