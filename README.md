@@ -1,5 +1,5 @@
-# DA-RNN_for_timeseries
-DA-RNN_for_timeseries 
+# DA-RNN for timeseries
+
 
 # Quel probleme cherche-t-on a résoudre ? 
 On cherche a determiner les valeurs futures d'un cours de bourse. Plus precisement, on souhaite predire les valeurs d'une serie temporelle a partir des occurences precedentes de celles ci mais aussi de plusieurs plusieures series exogènes c'est à dire exterieures au probleme principal bien qu'ayant une influence sur la serie etudiée. Cette manière de modeliser une situation se nomme le model NARX (Nonlinear Autoregressive Exogenous Model). L'objectif est de deceler un comportement non linéaire de la serie. 
