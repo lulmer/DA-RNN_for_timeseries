@@ -30,4 +30,5 @@ On note que le vecteur de contexte *ct* change à chaque time-step.  Une fois qu
 
 # Inconvenients de la méthode
 
+Sur des jeux de données divers la methode a tendance a sur-apprendre, c'est a dire qu'elle predit une serie très proche de la serie d'origine avec un leger decalage temporel. Nous avons focalisé notre attention sur le reglages des parametres permettant d'eviter ce probleme. Ainsi, nous cherchons a reduire le nombre de parametres du modèle tel qu'il est defini dans le papier... 
 
