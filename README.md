@@ -39,3 +39,4 @@ Notre base de données est donc composée de (11 * 1500 time series) + (1 * 1500
 
 
 
+![alt text](https://github.com/lulmer/DA-RNN_for_timeseries/blob/master/Capture%20d%E2%80%99e%CC%81cran%202019-11-28%20a%CC%80%2011.50.29.png)
