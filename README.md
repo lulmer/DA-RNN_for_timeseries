@@ -33,13 +33,38 @@ La méthode développée à pour inconvénient de prédire y(t+1) à partir de y
 Ce sont les séries exogènes qui ici empêchent de faire des prédictions sur le long terme, on ne les prédit pas à un instant t. 
 De plus le modèle est dépendant des séries exogènes, malgré qu’il soit résistant au bruit, si il n’y a pas de corrélation avec le signal à prédire, cela va dégrader les prédictions. 
 
-# Data CAC40
+# Data 
+Pour tester ce modèle, nous avons utiliser différents DataSets (séries éxogènes). Nous avons testé des données plus ou moins volumineuses et avec plus ou moins de données exogènes. 
+Notre modèle a notamment été testé sur des données financières, mais également sur des données métérologiques.
 
-Pour tester ce modèle, nous utilisons les données historiques du cours du CAC40 à l'instant t-1 ainsi que les données de la valeur boursière de 11 entreprises du CAC40 (séries éxogènes).
-Ces times series s'étalent sur 5 années, du 22/11/2014 au 28/11/2019. 
-Pour chacune des 11 entreprises, nous avons au total 1500 time series (correspondantes à 1500 jours d'ouverture de la bourse sur 5 ans)
-Notre base de données est donc composée de (11 * 1500 time series) + (1 * 1500 time series) 
+![alt text](https://github.com/lulmer/DA-RNN_for_timeseries/blob/master/Capture%20d%E2%80%99e%CC%81cran%202019-12-11%20a%CC%80%2011.40.04.png)
+
+Le schéma ci-dessus présente comment se réprésentent nos données dans notre modèle. 
+En prenant l'exemple des données du CAC40, on va apprendre notre modèle sur différents time series correspondant au cours boursier de plusieurs entreprises du CAC40 et du cours du CAC40 à l'instant t-1 également. A partir de ces données d'apprentissage, on va chercher à prédire le futur cours du CAC40. On utilise donc des données extérieures (les cours d'autres entreprises) au probleme principal mais ayant une influence sur la serie etudiée.  
+
+## CAC40
+11 time series
+1277 observations (ou points de data) 
+Ces times series s'étalent sur 1 année, du 22 Novembre 2018 au 28 Novembre 2019. 
+Cela correspond à 1 observation/jour/timeserie
+
+## NASDAQ
+81 time series
+34448 observations (ou points de data) 
+Ces times series s'étalent du 26 Juillet 2016 au 22 Décembre 2016. 
+Cela correspond à 390 observations/jour/timeserie
+
+## Cryptomonnaie
+2 time series 
+846 observations (ou points de data) 
+
+## Weather 
+17 time series 
+2764 observations (ou points de data) 
+
+
+# Expérimentations
 
 
 
-![alt text](https://github.com/lulmer/DA-RNN_for_timeseries/blob/master/Capture%20d%E2%80%99e%CC%81cran%202019-11-28%20a%CC%80%2011.50.29.png)
+
