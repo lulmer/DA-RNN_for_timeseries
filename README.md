@@ -39,16 +39,16 @@ Ce sont les séries exogènes qui ici empêchent de faire des prédictions sur l
 De plus le modèle est dépendant des séries exogènes, malgré qu’il soit résistant au bruit, si il n’y a pas de corrélation avec le signal à prédire, cela va dégrader les prédictions. 
 
 # Data 
-Pour tester ce modèle, nous avons utiliser différents DataSets. Nous avons testé des données plus ou moins volumineuses et avec plus ou moins de données exogènes. 
+Pour tester ce modèle, nous avons utiliser différents DataSets (séries éxogènes). Nous avons testé des données plus ou moins volumineuses et avec plus ou moins de données exogènes. 
 Notre modèle a notamment été testé sur des données financières, mais également sur des données métérologiques.
 
 ![alt text](https://github.com/lulmer/DA-RNN_for_timeseries/blob/master/illustrations/Capture%20d%E2%80%99e%CC%81cran%202019-12-11%20a%CC%80%2011.40.04.png)
 
 Le schéma ci-dessus présente comment se réprésentent nos données dans notre modèle. 
-En prenant l'exemple des données du CAC40, on va apprendre notre modèle sur différents time series correspondant au cours boursier de plusieurs entreprises du CAC40 et du cours du CAC40 jusqu'à l'instant t-1 également. A partir de ces données d'apprentissage, on va chercher à prédire le futur cours du CAC40. On utilise donc des données extérieures (les cours d'autres entreprises) au probleme principal mais ayant une influence sur la serie etudiée.  
+En prenant l'exemple des données du CAC40, on va apprendre notre modèle sur différents time series correspondant au cours boursier de plusieurs entreprises du CAC40 et du cours du CAC40 à l'instant t-1 également. A partir de ces données d'apprentissage, on va chercher à prédire le futur cours du CAC40. On utilise donc des données extérieures (les cours d'autres entreprises) au probleme principal mais ayant une influence sur la serie etudiée.  
 
 ## CAC40
-12 time series
+11 time series
 1277 observations (ou points de data) 
 Ces times series s'étalent sur 1 année, du 22 Novembre 2018 au 28 Novembre 2019. 
 Cela correspond à 1 observation/jour/timeserie
@@ -60,11 +60,11 @@ Ces times series s'étalent du 26 Juillet 2016 au 22 Décembre 2016.
 Cela correspond à 390 observations/jour/timeserie
 
 ## Cryptomonnaie
-3 time series 
+2 time series 
 846 observations (ou points de data) 
 
 ## Weather 
-18 time series 
+17 time series 
 2764 observations (ou points de data) 
 
 
@@ -83,3 +83,9 @@ Cela correspond à 390 observations/jour/timeserie
 
 ## Weather 
 ![alt text](https://github.com/lulmer/DA-RNN_for_timeseries/blob/master/illustrations/exp_weather.png)
+
+
+# Conclusion 
+A l'issue des expérimentations, on constate que le modèle est spécifique dans le sens où l'on peut prédire à l'instant t+1 mais pas plus. Bien quelle soit résistante au bruit, la méthode est fortement dépendante des données exogènes fournies. 
+Cela pose un réel problème notamment si l'on est pas certain que les données fournies influencent la série que l'on souhaite prédire. Par exemple sur les cours boursiers, des évènements inexpliqués par le cours d'autres entreprises peuvent influencer le cours de l'indice boursier. 
+A l'inverse, sur l'exemple des données météorologiques, les résultats sont meilleurs car les données exogènes influencent davantage la série que l'on souhaite prédire.
