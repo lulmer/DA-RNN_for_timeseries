@@ -65,6 +65,16 @@ Cela correspond à 390 observations/jour/timeserie
 
 # Expérimentations
 
+## CAC40
+![alt text](https://github.com/lulmer/DA-RNN_for_timeseries/blob/master/illustrations/Capture%20d%E2%80%99e%CC%81cran%202019-12-11%20a%CC%80%2022.02.28.png)
 
+## NASDAQ
+![alt text](https://github.com/lulmer/DA-RNN_for_timeseries/blob/master/illustrations/Capture%20d%E2%80%99e%CC%81cran%202019-12-11%20a%CC%80%2022.01.05.png)
 
+![alt text](https://github.com/lulmer/DA-RNN_for_timeseries/blob/master/illustrations/Capture%20d%E2%80%99e%CC%81cran%202019-12-11%20a%CC%80%2022.01.36.png)
 
+## Cryptomonnaie
+![alt text](https://github.com/lulmer/DA-RNN_for_timeseries/blob/master/illustrations/Capture%20d%E2%80%99e%CC%81cran%202019-12-11%20a%CC%80%2022.03.06.png)
+
+## Weather 
+![alt text](https://github.com/lulmer/DA-RNN_for_timeseries/blob/master/illustrations/Capture%20d%E2%80%99e%CC%81cran%202019-12-11%20a%CC%80%2022.04.46.png)
