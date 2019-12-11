@@ -37,7 +37,7 @@ De plus le modèle est dépendant des séries exogènes, malgré qu’il soit r�
 Pour tester ce modèle, nous avons utiliser différents DataSets (séries éxogènes). Nous avons testé des données plus ou moins volumineuses et avec plus ou moins de données exogènes. 
 Notre modèle a notamment été testé sur des données financières, mais également sur des données métérologiques.
 
-![alt text](https://github.com/lulmer/DA-RNN_for_timeseries/blob/master/Capture%20d%E2%80%99e%CC%81cran%202019-12-11%20a%CC%80%2011.40.04.png)
+![alt text](https://github.com/lulmer/DA-RNN_for_timeseries/blob/master/illustrations/Capture%20d%E2%80%99e%CC%81cran%202019-12-11%20a%CC%80%2011.40.04.png)
 
 Le schéma ci-dessus présente comment se réprésentent nos données dans notre modèle. 
 En prenant l'exemple des données du CAC40, on va apprendre notre modèle sur différents time series correspondant au cours boursier de plusieurs entreprises du CAC40 et du cours du CAC40 à l'instant t-1 également. A partir de ces données d'apprentissage, on va chercher à prédire le futur cours du CAC40. On utilise donc des données extérieures (les cours d'autres entreprises) au probleme principal mais ayant une influence sur la serie etudiée.  
