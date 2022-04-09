@@ -1,16 +1,14 @@
 # DA-RNN for timeseries prediction
-Dans le cadre de notre projet de Deep Learning, nous avons décidé d'étudier la méthode "Dual-Attention Recurrent Neural Network". 
+
 **A Dual-Stage Attention-Based Recurrent Neural Network for Time Series Prediction**
 *Yao Qin1∗, Dongjin Song2, Haifeng Chen2, Wei Cheng2, Guofei Jiang2, Garrison W. Cottrell1 1University of California, San Diego; 2NEC Laboratories America, Inc.*
-
-Nous avons, durant ce projet, analysé la méthode puis nous l'avons testé sur d'autres bases de données.
 
 # Quel probleme cherche-t-on a résoudre ? 
 On cherche a déterminer l'instant t+1 d'une serie temporelle . Plus précisement, on souhaite predire cette valeur à partir des occurences precedentes de celles ci mais aussi de plusieurs séries exogènes, c'est à dire extérieures au probleme principal bien qu'ayant une influence sur la serie etudiée. Cette manière de modeliser une situation se nomme le model NARX (Nonlinear Autoregressive Exogenous Model). L'objectif est de deceler un comportement non linéaire de la serie. 
 
 # Originilatité/specificité de la Methode
 ## Etat de l'art 
-Beaucoups de methodes ont été mise en oeuvre pour répondre au problème : méthodes à noyau, ensemblistes, gaussiennes. Le probleme est que la majorité de ces modélisation se basent sur des formes non-lineaires prédéfinies qui peuvent ne pas saisir de manière approprié les relations non linéaires du problème.
+Beaucoup de methodes ont été mise en oeuvre pour répondre au problème : méthodes à noyau, ensemblistes, gaussiennes. Le probleme est que la majorité de ces modélisation se basent sur des formes non-lineaires prédéfinies qui peuvent ne pas saisir de manière approprié les relations non linéaires du problème.
 
 Les RNNs ont été une solution à ce probleme, car plus flexibles pour capturer des relations non linéaires. Mais encore une fois ils ont leurs limites comme le montre Joshua Bengio avec le probleme de l'annulation du gradient lorsque le réseau est trop profond (c.a.d qu'il n'apprend plus). Les RNNs ont ainsi du mal à prendre l'information lorsque les séries temporelles dépendent de plus d'un état passé. 
 
